@@ -2,6 +2,17 @@
 	<changelog>
 		<element>mod_cg_parallax</element>
 		<type>module</type>
+		<version>3.0.1</version>
+        <note>
+            <item>Update : 05-10-2023</item>
+        </note>
+        <fix>
+            <item>New release bugs</item>
+        </fix>
+	</changelog>
+	<changelog>
+		<element>mod_cg_parallax</element>
+		<type>module</type>
 		<version>3.0.0</version>
         <note>
             <item>Update : 05-10-2023</item>

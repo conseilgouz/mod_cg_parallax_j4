@@ -18,12 +18,11 @@ $modulefield	= 'media/mod_cg_parallax/';
 HTMLHelper::_('jquery.framework');
 /** @var Joomla\CMS\WebAsset\WebAssetManager $wa */
 $wa = Factory::getApplication()->getDocument()->getWebAssetManager();
-$wa->addInlineStyle($params->get('css',''));
+$wa->addInlineStyle($params->get('css_gen',''));
 $wa->registerAndUseStyle('parallax',$modulefield.'css/parallax.css');
 $wa->registerAndUseStyle('vegas',$modulefield.'css/vegas.min.css');
 $wa->registerAndUseScript('coloranim', $modulefield.'/js/color_anim.js');
 $wa->registerAndUseScript('vegas', $modulefield.'/js/vegas.min.js');
-
 if ((bool)Factory::getConfig()->get('debug')) { // Mode debug
 	$document->addScript(''.URI::base(true).'/media/mod_cg_parallax/js/parallax.js'); 
 } else {
