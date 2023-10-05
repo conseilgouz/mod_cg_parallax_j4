@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <form>
+	<config>         
+		<inlinehelp button="show"/>     
+	</config>
+
      <fieldset name="section">
 		<field name="title" type="text" label="CG_TITLE" description="CG_TITLE_DESC"/>
 		<field showon="sf_type!:menu"  name="cg_img_type" type="radio" label="CG_IMG_TYPE" description="CG_IMG_TYPE_DESC"

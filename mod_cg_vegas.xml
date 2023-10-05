@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <form>
+	<config>         
+		<inlinehelp button="show"/>     
+	</config>
 	<fieldset hidden="true" name="vegas_config_modal" repeat="true">
 		<field name="vegas_delay" type="text" default="12000" label="CG_VEGAS_DELAY" description="CG_VEGAS_DELAY_DESC"/>
 		<field name="vegas_trans" type="list"  label="CG_VEGAS_TRANS" default="fade" description="CG_VEGAS_TRANS_DESC">
