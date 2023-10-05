@@ -45,7 +45,7 @@ class CgparallaxHelper
 				$article = self::getArticle($item->article,$params);
 				$article = $article[0];
 				// apply contents plugins
-				$item_tmp = new stdClass;
+				$item_tmp = new \stdClass;
 				if ($item->intro_full == "full") {
 					$item_tmp->text = $article->fulltext;
 				} elseif ($item->intro_full == "introfull") {
@@ -63,7 +63,7 @@ class CgparallaxHelper
 			} else { // free text
 				$article = $item->text;
 				// apply contents plugins
-				$item_tmp = new stdClass;
+				$item_tmp = new \stdClass;
 				$item_tmp->text = $article;
 				$item_tmp->params = $params;
 				Factory::getApplication()->triggerEvent('onContentPrepare', array ('com_content.article', $item_tmp, $item_tmp->params, 0));
@@ -109,13 +109,15 @@ class CgparallaxHelper
 				}
 				$images .= "]";
 			}
-			$lighten = (10 - $item->lighten) / 10;
-			$result .= "<style>.cg_bg_img_".$ix." .vegas-slide-inner {filter:opacity(".$lighten.")}";
-			if ($animation == "none") {
+			if ($images) {
+			     $lighten = (10 - $item->lighten) / 10;
+			     $result .= "<style>.cg_bg_img_".$ix." .vegas-slide-inner {filter:opacity(".$lighten.")}";
+			     if ($animation == "none") {
 					$result .= '.cg_bg_img_'.$ix.' .vegas-slide,.cg_bg_img_'.$ix.' .vegas-slide-inner {will-change: opacity;transform:none}';
-			}	
-			$result .= "</style>";
-			$result .= "<script>jQuery('.cg_bg_img_".$ix."').vegas({slides:".$images.",delay:".$delay.",transitionDuration: ".$duration.",cover:true, transition:'".$trans."',animation: '".$animation."',loop: true});</script>";
+			     }	
+			     $result .= "</style>";
+			     $result .= "<script>jQuery('.cg_bg_img_".$ix."').vegas({slides:".$images.",delay:".$delay.",transitionDuration: ".$duration.",cover:true, transition:'".$trans."',animation: '".$animation."',loop: true});</script>";
+			}
 			$result .="</div>";
 			$ix +=1;
 		}
