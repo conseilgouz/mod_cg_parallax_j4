@@ -9,7 +9,7 @@
 	<authorUrl>www.conseilgouz.com</authorUrl>
 	<version>3.0.0</version>
 	<description>CG_XML_DESCRIPTION</description>
-	<namespace path="src">ConseilGouz\Module\CGFlip</namespace>
+	<namespace path="src">ConseilGouz\Module\CGParallax</namespace>
 	<scriptfile>script.php</scriptfile>
 	<files>
 		<filename module="mod_cg_parallax">mod_cg_parallax.php</filename>
