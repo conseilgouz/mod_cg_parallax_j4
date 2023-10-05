@@ -1,0 +1,73 @@
+/***********************************************************************************************
+**
+**									CSS style for Template manager
+**									
+**
+************************************************************************************************/
+.form-horizontal .controls {
+	margin-left: 10px;
+}
+/*.field-media-preview {float:right} */
+
+.span9 .control-group:nth-of-type(odd){
+	float:left;width:50%;
+}
+.span9 .control-group:nth-of-type(even){
+	float:right;width:50%;
+}
+.span9 .control-group:nth-of-type(n+7){
+	width:100%;
+}
+.span9 .subform-repeatable-group .control-group:nth-of-type(n+5){
+	width:100%}
+
+.tab-content .form-vertical, .subform-repeatable-group {
+background: #f0f0f0;
+border:2px solid #ddd;
+margin-top:40px;
+padding:20px;
+}
+
+.info-labels + div {
+background: none repeat scroll 0 0 #EEEEEE;
+color: #000000;
+font-size: 110%;
+font-style: italic;
+font-weight: normal;
+margin: 15px 0 30px;
+padding: 15px 10px 10px 20px;
+}
+
+/*
+.control-group label {
+width:250px;
+}
+
+span.spacer {
+display:block;
+clear:both;
+margin-bottom:20px;
+padding-top:20px;
+border-bottom : 2px dotted #aaa;
+width:900px;
+}
+
+span.spacer label {
+display:none;
+}
+
+@media screen and (max-width: 979px) {
+
+	span.spacer {
+	width:auto;
+	}
+
+}
+.row-fluid [class*="span"]:first-child {
+margin-left: 15px;
+}
+
+.row-fluid [class*="span"] {
+margin-left: 15px;
+}
+*/

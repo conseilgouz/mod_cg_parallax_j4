@@ -1,0 +1,16 @@
+<changelogs>
+	<changelog>
+		<element>mod_cg_parallax</element>
+		<type>module</type>
+		<version>3.0.0</version>
+        <note>
+            <item>Update : 05-10-2023</item>
+        </note>
+        <fix>
+            <item>Joomla 5.x compatibility</item>
+        </fix>
+        <change>
+            <item>Joomla 4.x/5.x architecture</item>
+        </change>
+	</changelog>
+</changelogs>

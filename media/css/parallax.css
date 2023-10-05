@@ -1,0 +1,103 @@
+/**
+ * @package CG Parallax Module
+ * @version 2.0.3
+ * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ * @copyright (c) 2021 ConseilGouz. All Rights Reserved.
+ * @author ConseilGouz 
+ */
+#cg_navbar {
+  overflow: hidden;
+}
+#cg_navbar a {
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+}
+#cg_navbar > ul {
+	display:inline-block;
+	width:100%;
+	margin: 0;
+}
+#cg_navbar >ul > li {
+	display:block;
+}
+
+a.cg_anchor {
+    display: block;
+    position: relative;
+    top: -100px;
+    visibility: hidden;
+} 
+.cg_sticky {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  width: 100%
+}
+.cg_para_icon {
+	display:none !important;
+}
+/* responsive mode */
+@media screen and (max-width: 979px) {
+#cg_navbar {
+	width:5em;
+	float:left;
+}	
+#cg_navbar.responsive {
+	width:100%;
+	float:none;
+}
+#cg_navbar > ul {
+	display:none;
+}
+#cg_navbar .cg_para_icon {
+    position: relative;
+	display:block !important;
+    margin-right: 1em;
+	right:0;
+	font-size:1.2em;
+    top: 0;
+  }
+#cg_navbar.responsive .cg_para_icon {
+	display:none !important;
+}
+#cg_navbar.responsive > ul {
+	display:block;
+}
+}
+/* no parallax on smaller screen */
+@media screen and (max-width: 979px)  {
+ .cg_bg_section {
+     background-attachment: scroll;
+ }
+}
+/*
+	 From CSS-Tricks MagicLine Demo by Chris Coyier
+*/
+#cg_magic { 
+	margin: 0 auto; 
+	list-style: none; 
+	position: relative; 
+	width: 100%; 
+}
+#cg_magic li a { 
+	position: relative; 
+	z-index: 200; 
+}
+#cg_magic #cg_magic_line { 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	background: #900; 
+	z-index: 100; 
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+#cg_magic .active {color : #7aa371}
+
+.ie6 #cg_magic li, .ie7 #cg_magic li {
+	display: inline;
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset hidden="true" name="vegas_config_modal" repeat="true">
+		<field name="vegas_delay" type="text" default="12000" label="CG_VEGAS_DELAY" description="CG_VEGAS_DELAY_DESC"/>
+		<field name="vegas_trans" type="list"  label="CG_VEGAS_TRANS" default="fade" description="CG_VEGAS_TRANS_DESC">
+			<option	value="fade">CG_FADE</option>
+			<option	value="slideLeft">CG_SLIDE_LEFT</option>
+			<option	value="slideRight">CG_SLIDE_RIGHT</option>
+			<option	value="slideUp">CG_SLIDE_UP</option>
+			<option	value="slideDown">CG_SLIDE_DOWN</option>
+			<option	value="zoomIn">CG_ZOOM_IN</option>
+			<option	value="zoomOut">CG_ZOOM_OUT</option>
+			<option	value="swirlLeft">CG_SWIRL_LEFT</option>
+			<option	value="swirlRight">CG_SWIRL_RIGHT</option>
+			<option	value="burn">CG_BURN</option>
+			<option	value="blur">CG_BLUR</option>
+			<option	value="flash">CG_FLASH</option>
+		</field>	
+		<field name="vegas_duration" type="text" default="1000" label="CG_VEGAS_DURATION" description="CG_VEGAS_DURATION_DESC"/>
+			<field name="vegas_anim" type="list"  label="CG_VEGAS_ANIM" default="random" description="CG_VEGAS_ANIM_DESC">
+				<option	value="none">JNONE</option>
+				<option	value="random">CG_RANDOM</option>
+				<option	value="kenburns">CG_KENBURNS</option>
+				<option	value="kenburnsUp">CG_KENBURNS_UP</option>
+				<option	value="kenburnsDown">CG_KENBURNS_DOWN</option>
+				<option	value="kenburnsRight">CG_KENBURNS_RIGHT</option>
+				<option	value="kenburnsLeft">CG_KENBURNS_LEFT</option>
+			</field>	
+	</fieldset>
+</form>

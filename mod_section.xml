@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+     <fieldset name="section">
+		<field name="title" type="text" label="CG_TITLE" description="CG_TITLE_DESC"/>
+		<field showon="sf_type!:menu"  name="cg_img_type" type="radio" label="CG_IMG_TYPE" description="CG_IMG_TYPE_DESC"
+			class="btn-group" default="one">
+			<option value="none">CG_NONE</option>
+			<option value="one">CG_ONE_FILE</option>
+			<option value="files">CG_FILES</option>
+		</field>
+		<field showon="sf_type!:menu[AND]cg_img_type:one" name="image" type="media" default="" label="CG_IMAGE" description="CG_IMAGE_DESC" preview="tooltip" preview_width="100" preview_height="100"/>
+		<field showon="cg_img_type:dir" name="dir" type="folderlist" default="" label="CG_DIR" description="CG_DIR_DESC" 
+				directory="images" filter="" exclude="" stripext="" />	
+	    <field showon="cg_img_type:files" name="slideslistJ4"  label="CG_SLIDE_LIST"
+				type="subform" multiple ="true" 
+				formsource="/modules/mod_cg_parallax/mod_cg_imgs.xml"  />		
+		<field showon="cg_img_type:one,files[AND]sf_type:content,text" name="lighten" type="number" default="0" label="CG_LIGHTEN" description="CG_LIGHTEN_DESC" size="1" min="0" max="9" step="1" filter="integer" />
+		<field showon="cg_img_type:one,files[AND]sf_type:content,text" name="cg_anim" type="radio" default="true" label="CG_ANIM" description="CG_ANIM_DESC" class="btn-group btn-group-yesno">
+			<option value="true">JYES</option>
+			<option value="false">JNO</option>
+		</field>
+	    <field showon="sf_type!:menu[AND]cg_anim:true" name="vegas_configJ4"  label="CG_ANIM_CONFIG"
+				type="subform" multiple ="false" 
+				formsource="/modules/mod_cg_parallax/mod_cg_vegas.xml"  />		
+		<field name="sf_type" type="radio"  label="CG_TYPE" default="content" description="CG_TYPE_DESC">
+			<option	value="content">CG_ARTICLE</option>
+			<option	value="text">CG_TEXT</option>
+			<option	value="menu">CG_MENU</option>
+		</field>	
+		<field showon="sf_type:content"
+			name="article" type="sql" default="0" label="CG_ARTICLE" description="CG_ARTICLE_DESC"
+			query="SELECT id as article_id, title as value FROM #__content"
+			key_field="article_id"	value_field="value"	/>
+		<field showon="sf_type:content"
+			name="intro_full" type="radio" default="intro" label="CG_INTRO_FULL" description="CG_INTRO_FULL_DESC">
+			<option	value="intro">CG_ARTICLE_INTRO</option>
+			<option	value="full">CG_ARTICLE_FULL</option>
+			<option	value="introfull">CG_ARTICLE_INTROFULL</option>
+		</field>
+		<field showon="sf_type:content[AND]intro_full:intro"
+			name="readmore" type="radio" default="true" label="CG_READMORE" description="CG_READMORE_DESC">
+				<option value="true">JYES</option>
+				<option value="false">JNO</option>
+		</field>
+		<field showon="sf_type:menu"
+			name="menu" type="menuitem" default="contact" label="CG_SECTION_MENU" description="CG_SECTION_MENU_DESC"
+		/>
+  		<field name="magic_bg" type="color" default="#8dc54a" label="CG_MAGIC_BG" description="CG_MAGIC_BG_DESC" />
+		<field showon="sf_type:text" name="text" type="editor" label="CG_TEXT" description="CG_TEXT_DESC" cols="40" rows="4" filter="safehtml" default="" />
+		<field showon="sf_type!:menu" name="css" type="textarea" label="CG_CSS" description="CG_CSS_DESC" cols="80" rows="4" filter="raw" 
+			default=".cg_bg_img_&lt;no&gt; {} "	/>	
+	</fieldset>
+</form>

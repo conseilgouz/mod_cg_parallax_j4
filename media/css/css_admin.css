@@ -1,0 +1,31 @@
+/**
+ * @package CG Parallax Module
+ * @version 2.0.3
+ * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ * @copyright (c) 2021 ConseilGouz. All Rights Reserved.
+ * @author ConseilGouz 
+ * 
+ *						>>>	CSS for Admin display module  <<<
+ */
+.form-horizontal .controls {
+	margin-left: 10px;
+}
+.controls textarea {width:100%}
+.tab-content .form-vertical, .subform-repeatable-group {
+background: #f0f0f0;
+border:2px solid #ddd;
+margin-top:40px;
+padding:20px;
+}
+
+.info-labels + div {
+background: none repeat scroll 0 0 #EEEEEE;
+color: #000000;
+font-size: 110%;
+font-style: italic;
+font-weight: normal;
+margin: 15px 0 30px;
+padding: 15px 10px 10px 20px;
+}
+.card-body .control-group:nth-of-type(12) .control-label {display:none}
+.subform-repeatable-group .control-group .control-label {display:block !important}
