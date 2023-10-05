@@ -1,7 +1,7 @@
 <?php
 /**
  * @package CG Parallax Module for Joomla!4.x/5.x
- * @version 3.0.0 
+ * @version 3.0.2 
  * @license https://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
  * @copyright (c) 2023 ConseilGouz. All Rights Reserved.
  * @author ConseilGouz 
@@ -21,12 +21,12 @@ $wa = Factory::getApplication()->getDocument()->getWebAssetManager();
 $wa->addInlineStyle($params->get('css_gen',''));
 $wa->registerAndUseStyle('parallax',$modulefield.'css/parallax.css');
 $wa->registerAndUseStyle('vegas',$modulefield.'css/vegas.min.css');
-$wa->registerAndUseScript('coloranim', $modulefield.'/js/color_anim.js');
-$wa->registerAndUseScript('vegas', $modulefield.'/js/vegas.min.js');
+$wa->registerAndUseScript('coloranim', $modulefield.'js/color_anim.js');
+$wa->registerAndUseScript('vegas', $modulefield.'js/vegas.min.js');
 if ((bool)Factory::getConfig()->get('debug')) { // Mode debug
 	$document->addScript(''.URI::base(true).'/media/mod_cg_parallax/js/parallax.js'); 
 } else {
-	$wa->registerAndUseScript('cgpopup', $modulefield.'/js/parallax.js');
+	$wa->registerAndUseScript('cgpopup', $modulefield.'js/parallax.js');
 }
 $parallax =  CgparallaxHelper::getParallax($params);
 $document->addScriptOptions('mod_cg_parallax', 
