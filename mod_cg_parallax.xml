@@ -2,22 +2,23 @@
 <extension version="4.0" type="module" method="upgrade" client="site">
 	<name>CG Parallax</name>
 	<author>ConseilGouz</author>
-	<creationDate>2023-10-05</creationDate>
+	<creationDate>2025-09-27</creationDate>
 	<copyright>Copyright (C) 2023 ConseilGouz. All rights reserved</copyright>
 	<license>https://www.gnu.org/licenses/gpl-3.0.html GNU/GPLv2</license>
 	<authorEmail>pascal.leconte@conseilgouz.com</authorEmail>
 	<authorUrl>www.conseilgouz.com</authorUrl>
-	<version>3.0.2</version>
+	<version>3.1.0</version>
 	<description>CG_XML_DESCRIPTION</description>
 	<namespace path="src">ConseilGouz\Module\CGParallax</namespace>
 	<scriptfile>script.php</scriptfile>
 	<files>
-		<filename module="mod_cg_parallax">mod_cg_parallax.php</filename>
+		<folder module="mod_cg_parallax">services</folder>
 		<filename>index.html</filename>
 		<filename>mod_section.xml</filename>
 		<filename>mod_cg_imgs.xml</filename>
 		<filename>mod_cg_vegas.xml</filename>
 		<folder>src</folder>
+		<folder>tmpl</folder>
 	</files>
 	<media destination="mod_cg_parallax" folder="media">
 		<folder>js</folder>
@@ -33,7 +34,7 @@
 	
 	<config>
 	<fields name="params" >
-		<fieldset name="basic" addfieldprefix="ConseilGouz\Module\CGParallax\Site\Field">
+		<fieldset name="basic" addfieldprefix="ConseilGouz\Library\Field">
 				<field name="version" type="version"  margintop="-3em" extension="mod_cg_parallax"/>>
    			<field name="menu" type="radio" class="btn-group btn-group-yesno"
 				default="true" 	label="CG_MENU" description="CG_MENU_DESC">

@@ -1,9 +1,8 @@
 <?php
 /**
  * @package CG Parallax Module
- * @version 3.0.0 
  * @license https://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
- * @copyright (c) 2023 ConseilGouz. All Rights Reserved.
+ * @copyright (c) 2025 ConseilGouz. All Rights Reserved.
  * @author ConseilGouz 
  */
 namespace ConseilGouz\Module\CGParallax\Site\Helper;
@@ -140,7 +139,7 @@ class CgparallaxHelper
 
 		// Access filter
 		$access = ComponentHelper::getParams('com_content')->get('show_noauth');
-		$authorised = Access::getAuthorisedViewLevels(Factory::getUser()->get('id'));
+		$authorised = Access::getAuthorisedViewLevels(Factory::getApplication()->getIdentity()->id);
 		$model->setState('filter.access', $access);
 
 		// Category filter
@@ -186,7 +185,7 @@ class CgparallaxHelper
 	public static function getAjax() {
 		$module = ModuleHelper::getModule('cg_parallax');
 		$params = new Registry($module->params);  		
-        $input = Factory::getApplication()->input;
+        $input = Factory::getApplication()->getInput();
 		if ($input->get('data') == "param") {
 			return '{"name":"'.$module->name.'","navbar_bg":"'.$params->get('navbar_bg','lightgrey').'","navbar_color":"'.$params->get('navbar_color', 'black').'","menu":"'.$params->get('menu','true').'","sticky":"'.$params->get('sticky','true').'","magic":"'.$params->get('magic','false').'","magic_active":"'.$params->get('magic_active','blue').'"}';
 		}
